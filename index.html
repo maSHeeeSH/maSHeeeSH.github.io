@@ -9,225 +9,305 @@
 </head>
 <body>
 
-  <!-- ШАПКА -->
-  <header>
-    <div class="container">
-      <div class="header-inner">
-        <a href="#" class="logo">
-          <svg viewBox="0 0 24 24"><path d="M3 18h18v-2H3v2zm0-5h18v-2H3v2zm0-7v2h18V6H3z"/></svg>
-          Объявления
-        </a>
-        <nav class="nav">
-          <a href="#">Главная</a>
-          <a href="#">О нас</a>
-          <a href="#">Правила</a>
-        </nav>
-        <div class="auth-buttons">
-          <button>Вход</button>
-          <button>Регистрация</button>
-        </div>
+  <!-- HEADER -->
+  <header class="header">
+    <div class="container header-inner">
+      <a href="#" class="logo">
+        <img src="Frame 12.svg" alt="Логотип" class="logo-icon">
+        Объявления
+      </a>
+      <div class="auth-buttons">
+        <button class="auth-btn register-btn" onclick="document.getElementById('registerModal').showModal()">
+          Регистрация
+        </button>
+        <button class="auth-btn login-btn" onclick="document.getElementById('loginModal').showModal()">
+          Вход
+        </button>
       </div>
     </div>
   </header>
 
-  <!-- ОСНОВНОЙ КОНТЕНТ -->
+  <!-- MAIN -->
   <main class="main">
     <div class="container">
-      <h1 class="section-title">Новые объявления</h1>
+      <div class="section-header">
+        <h1 class="section-title">Новые объявления</h1>
+        <button class="add-btn" onclick="document.getElementById('addDialog').showModal()">
+          <span class="add-icon">+</span>
+          <span class="add-text">Добавить объявление</span>
+        </button>
+      </div>
 
-      <!-- КНОПКА ДОБАВИТЬ -->
-      <button class="add-btn" onclick="document.getElementById('addDialog').showModal()">
-        + Добавить объявление
-      </button>
-
-      <!-- СЕТКА ОБЪЯВЛЕНИЙ -->
+      <!-- FLEX ДЛЯ КАРТОЧЕК -->
       <div class="ads-grid">
-        <!-- Товар 1 -->
+        <!-- ТОВАР 1 -->
         <div class="ad-card">
-          <div class="ad-img"><img src="./images/red-apple.jpg" alt="Красное яблоко"></div>
-          <div class="ad-info">
-            <div class="ad-title">Красное яблоко</div>
-            <div class="ad-price">50 ₽</div>
+          <div class="ad-img">
+            <img src="./images/red-apple.jpg" alt="Красное яблоко">
           </div>
+          <div class="ad-price">50 ₽</div>
+          <div class="ad-title">Красное яблоко</div>
         </div>
-        
-        <!-- Товар 2 -->
+
+        <!-- ТОВАР 2 -->
         <div class="ad-card">
-          <div class="ad-img"><img src="./images/design-book.jpg" alt="Книга по дизайну"></div>
-          <div class="ad-info">
-            <div class="ad-title">Книга по дизайну</div>
-            <div class="ad-price">500 ₽</div>
+          <div class="ad-img">
+            <img src="./images/design-book.jpg" alt="Книга по дизайну">
           </div>
+          <div class="ad-price">500 ₽</div>
+          <div class="ad-title">Книга по дизайну</div>
         </div>
-        
-        <!-- Товар 3 -->
+
+        <!-- ТОВАР 3 -->
         <div class="ad-card">
-          <div class="ad-img"><img src="./images/samsung-phone.jpg" alt="Смартфон Samsung"></div>
-          <div class="ad-info">
-            <div class="ad-title">Смартфон Samsung</div>
-            <div class="ad-price">15 000 ₽</div>
+          <div class="ad-img">
+            <img src="./images/samsung-phone.jpg" alt="Смартфон Samsung">
           </div>
+          <div class="ad-price">15 000 ₽</div>
+          <div class="ad-title">Смартфон Samsung</div>
         </div>
-        
-        <!-- Товар 4 -->
+
+        <!-- ТОВАР 4 -->
         <div class="ad-card">
-          <div class="ad-img"><img src="./images/nike-shoes.jpg" alt="Кроссовки Nike"></div>
-          <div class="ad-info">
-            <div class="ad-title">Кроссовки Nike</div>
-            <div class="ad-price">4 000 ₽</div>
+          <div class="ad-img">
+            <img src="./images/nike-shoes.jpg" alt="Кроссовки Nike">
           </div>
+          <div class="ad-price">4 000 ₽</div>
+          <div class="ad-title">Кроссовки Nike</div>
         </div>
-        
-        <!-- Товар 5 -->
+
+        <!-- ТОВАР 5 -->
         <div class="ad-card">
-          <div class="ad-img"><img src="./images/white-shirt.jpg" alt="Белая футболка"></div>
-          <div class="ad-info">
-            <div class="ad-title">Белая футболка</div>
-            <div class="ad-price">800 ₽</div>
+          <div class="ad-img">
+            <img src="./images/white-shirt.jpg" alt="Белая футболка">
           </div>
+          <div class="ad-price">800 ₽</div>
+          <div class="ad-title">Белая футболка</div>
         </div>
-        
-        <!-- Товар 6 -->
+
+        <!-- ТОВАР 6 -->
         <div class="ad-card">
-          <div class="ad-img"><img src="./images/dell-laptop.jpg" alt="Ноутбук Dell"></div>
-          <div class="ad-info">
-            <div class="ad-title">Ноутбук Dell</div>
-            <div class="ad-price">30 000 ₽</div>
+          <div class="ad-img">
+            <img src="./images/dell-laptop.jpg" alt="Ноутбук Dell">
           </div>
+          <div class="ad-price">30 000 ₽</div>
+          <div class="ad-title">Ноутбук Dell</div>
         </div>
-        
-        <!-- Товар 7 -->
+
+        <!-- ТОВАР 7 -->
         <div class="ad-card">
-          <div class="ad-img"><img src="./images/school-bag.jpg" alt="Рюкзак для школы"></div>
-          <div class="ad-info">
-            <div class="ad-title">Рюкзак для школы</div>
-            <div class="ad-price">1 200 ₽</div>
+          <div class="ad-img">
+            <img src="./images/school-bag.jpg" alt="Рюкзак для школы">
           </div>
+          <div class="ad-price">1 200 ₽</div>
+          <div class="ad-title">Рюкзак для школы</div>
         </div>
-        
-        <!-- Товар 8 -->
+
+        <!-- ТОВАР 8 -->
         <div class="ad-card">
-          <div class="ad-img"><img src="./images/casio-watch.jpg" alt="Наручные часы Casio"></div>
-          <div class="ad-info">
-            <div class="ad-title">Наручные часы Casio</div>
-            <div class="ad-price">2 500 ₽</div>
+          <div class="ad-img">
+            <img src="./images/casio-watch.jpg" alt="Наручные часы Casio">
           </div>
+          <div class="ad-price">2 500 ₽</div>
+          <div class="ad-title">Наручные часы Casio</div>
         </div>
-        
-        <!-- Товар 9 -->
+
+        <!-- ТОВАР 9 -->
         <div class="ad-card">
-          <div class="ad-img"><img src="./images/sunglasses.jpg" alt="Солнечные очки"></div>
-          <div class="ad-info">
-            <div class="ad-title">Солнечные очки</div>
-            <div class="ad-price">1 000 ₽</div>
+          <div class="ad-img">
+            <img src="./images/sunglasses.jpg" alt="Солнечные очки">
           </div>
+          <div class="ad-price">1 000 ₽</div>
+          <div class="ad-title">Солнечные очки</div>
         </div>
-        
-        <!-- Товар 10 -->
+
+        <!-- ТОВАР 10 -->
         <div class="ad-card">
-          <div class="ad-img"><img src="./images/fedora-hat.jpg" alt="Шляпа федора"></div>
-          <div class="ad-info">
-            <div class="ad-title">Шляпа федора</div>
-            <div class="ad-price">900 ₽</div>
+          <div class="ad-img">
+            <img src="./images/fedora-hat.jpg" alt="Шляпа федора">
           </div>
+          <div class="ad-price">900 ₽</div>
+          <div class="ad-title">Шляпа федора</div>
         </div>
-        
-        <!-- Товар 11 -->
+
+        <!-- ТОВАР 11 -->
         <div class="ad-card">
-          <div class="ad-img"><img src="./images/banana.jpg" alt="Банан"></div>
-          <div class="ad-info">
-            <div class="ad-title">Банан</div>
-            <div class="ad-price">30 ₽</div>
+          <div class="ad-img">
+            <img src="./images/banana.jpg" alt="Банан">
           </div>
+          <div class="ad-price">30 ₽</div>
+          <div class="ad-title">Банан</div>
         </div>
-        
-        <!-- Товар 12 -->
+
+        <!-- ТОВАР 12 -->
         <div class="ad-card">
-          <div class="ad-img"><img src="./images/coffee-mug.jpg" alt="Кофейная кружка"></div>
-          <div class="ad-info">
-            <div class="ad-title">Кофейная кружка</div>
-            <div class="ad-price">300 ₽</div>
+          <div class="ad-img">
+            <img src="./images/coffee-mug.jpg" alt="Кофейная кружка">
           </div>
+          <div class="ad-price">300 ₽</div>
+          <div class="ad-title">Кофейная кружка</div>
         </div>
-        
-        <!-- Товар 13 -->
+
+        <!-- ТОВАР 13 -->
         <div class="ad-card">
-          <div class="ad-img"><img src="./images/notebook.jpg" alt="Блокнот"></div>
-          <div class="ad-info">
-            <div class="ad-title">Блокнот</div>
-            <div class="ad-price">150 ₽</div>
+          <div class="ad-img">
+            <img src="./images/notebook.jpg" alt="Блокнот">
           </div>
+          <div class="ad-price">150 ₽</div>
+          <div class="ad-title">Блокнот</div>
         </div>
-        
-        <!-- Товар 14 -->
+
+        <!-- ТОВАР 14 -->
         <div class="ad-card">
-          <div class="ad-img"><img src="./images/parker-pen.jpg" alt="Ручка Parker"></div>
-          <div class="ad-info">
-            <div class="ad-title">Ручка Parker</div>
-            <div class="ad-price">400 ₽</div>
+          <div class="ad-img">
+            <img src="./images/parker-pen.jpg" alt="Ручка Parker">
           </div>
+          <div class="ad-price">400 ₽</div>
+          <div class="ad-title">Ручка Parker</div>
         </div>
-        
-        <!-- Товар 15 -->
+
+        <!-- ТОВАР 15 -->
         <div class="ad-card">
-          <div class="ad-img"><img src="./images/usb-flash.jpg" alt="USB-флешка 32GB"></div>
-          <div class="ad-info">
-            <div class="ad-title">USB-флешка 32GB</div>
-            <div class="ad-price">600 ₽</div>
+          <div class="ad-img">
+            <img src="./images/usb-flash.jpg" alt="USB-флешка 32GB">
           </div>
+          <div class="ad-price">600 ₽</div>
+          <div class="ad-title">USB-флешка 32GB</div>
         </div>
       </div>
 
+      <!-- КНОПКА ПОКАЗАТЬ ЕЩЁ -->
       <div class="load-more">
-        <button>Показать ещё</button>
+        <button class="show-more-btn">
+          Показать ещё
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#e91e63" stroke-width="2">
+            <path d="M6 9l6 6 6-6"/>
+          </svg>
+        </button>
       </div>
     </div>
   </main>
 
-  <!-- МОДАЛЬНОЕ ОКНО -->
-  <dialog id="addDialog">
-    <h2 class="dialog-title">Добавить объявление</h2>
-    <form method="dialog">
-      <div class="form-group">
-        <label for="title">Заголовок *</label>
-        <input type="text" id="title" required placeholder="Например: iPhone 13">
+  <!-- МОДАЛЬНОЕ ОКНО: РЕГИСТРАЦИЯ -->
+  <dialog id="registerModal" class="modal">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h2 class="modal-title">
+          <span class="title-register">Регистрация</span>
+          <span class="title-auth">Авторизация</span>
+        </h2>
+        <button class="modal-close" onclick="document.getElementById('registerModal').close()">×</button>
       </div>
-
-      <div class="form-group">
-        <label for="photo">Фото</label>
-        <input type="file" id="photo" accept="image/*">
-      </div>
-
-      <div class="form-group">
-        <label for="desc">Описание</label>
-        <textarea id="desc" rows="4" placeholder="Подробности..."></textarea>
-      </div>
-
-      <div class="form-group">
-        <label for="price">Цена *</label>
-        <input type="number" id="price" required min="0" placeholder="0">
-      </div>
-
-      <div class="form-group">
-        <label for="email">Email (для откликов) *</label>
-        <input type="email" id="email" required placeholder="you@example.com">
-      </div>
-
-      <button type="submit" class="submit-btn">Опубликовать</button>
-      <button type="button" class="submit-btn close-btn" onclick="document.getElementById('addDialog').close()">
-        Отмена
-      </button>
-    </form>
+      <form class="modal-form">
+        <div class="form-row">
+          <div class="form-group">
+            <label>Имя</label>
+            <input type="text" placeholder="Константин" required>
+          </div>
+        </div>
+        <div class="form-row">
+          <div class="form-group">
+            <label>Email</label>
+            <input type="email" placeholder="info@gmail.com" required>
+          </div>
+          <div class="form-group">
+            <label>Мобильный телефон</label>
+            <input type="tel" placeholder="8 910 123 45 67" required>
+          </div>
+        </div>
+        <div class="form-row">
+          <div class="form-group">
+            <label>Пароль</label>
+            <input type="password" placeholder="********" required>
+          </div>
+          <div class="form-group">
+            <label>Повторите пароль</label>
+            <input type="password" placeholder="********" required>
+          </div>
+        </div>
+        <div class="form-group checkbox">
+          <input type="checkbox" id="agree" required>
+          <label for="agree">Согласен на обработку персональных данных</label>
+        </div>
+        <button type="submit" class="submit-btn">Зарегистрироваться</button>
+        <div class="modal-footer">
+          <span>Все поля обязательны для заполнения</span>
+        </div>
+      </form>
+    </div>
   </dialog>
 
-  <!-- ПОДВАЛ -->
-  <footer>
-    <div class="container">
-      <div class="footer-inner">
-        <div>info@gmail.com</div>
-        <div class="footer-links">
-          <a href="#">Информация о разработчике</a>
+  <!-- МОДАЛЬНОЕ ОКНО: ВХОД -->
+  <dialog id="loginModal" class="modal">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h2 class="modal-title">
+          <span class="title-register">Регистрация</span>
+          <span class="title-auth">Авторизация</span>
+        </h2>
+        <button class="modal-close" onclick="document.getElementById('loginModal').close()">×</button>
+      </div>
+      <form class="modal-form">
+        <div class="form-row">
+          <div class="form-group">
+            <label>Email</label>
+            <input type="email" placeholder="info@gmail.com" required>
+          </div>
+          <div class="form-group">
+            <label>Пароль</label>
+            <input type="password" placeholder="********" required>
+          </div>
         </div>
+        <button type="submit" class="submit-btn">Войти</button>
+        <div class="modal-footer">
+          <span>Все поля обязательны для заполнения</span>
+        </div>
+      </form>
+    </div>
+  </dialog>
+
+  <!-- МОДАЛЬНОЕ ОКНО: ДОБАВИТЬ ОБЪЯВЛЕНИЕ -->
+  <dialog id="addDialog" class="modal">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h2 class="modal-title">Добавить объявление</h2>
+        <button class="modal-close" onclick="document.getElementById('addDialog').close()">×</button>
+      </div>
+      <form class="modal-form">
+        <div class="form-group">
+          <label>Заголовок *</label>
+          <input type="text" placeholder="Например: iPhone 13" required>
+        </div>
+        <div class="form-group">
+          <label>Фото</label>
+          <input type="file" accept="image/*">
+        </div>
+        <div class="form-group">
+          <label>Описание</label>
+          <textarea rows="4" placeholder="Подробности..."></textarea>
+        </div>
+        <div class="form-group">
+          <label>Цена *</label>
+          <input type="number" placeholder="0" min="0" required>
+        </div>
+        <div class="form-group">
+          <label>Email (для откликов) *</label>
+          <input type="email" placeholder="you@example.com" required>
+        </div>
+        <button type="submit" class="submit-btn">Опубликовать</button>
+        <button type="button" class="submit-btn close-btn" onclick="document.getElementById('addDialog').close()">
+          Отмена
+        </button>
+      </form>
+    </div>
+  </dialog>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <div class="container footer-inner">
+      <div class="footer-email">info@gmail.com</div>
+      <div class="footer-links">
+        <a href="#">Информация о разработчике</a>
       </div>
     </div>
   </footer>
