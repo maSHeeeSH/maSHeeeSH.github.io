@@ -43,6 +43,9 @@ button, input, textarea, label { font-family: inherit; }
   width: 24px;
   height: 24px;
 }
+.logo-text {
+  display: inline; /* Видно в десктопе */
+}
 .auth-btn {
   background: none;
   border: none;
@@ -393,14 +396,20 @@ button, input, textarea, label { font-family: inherit; }
     font-size: 12px; /* Уменьшаем шрифт для заголовка */
   }
   .header-inner {
-    flex-direction: column;
-    gap: 12px;
+    flex-direction: row; /* Оставляем row для одной строки */
+    justify-content: space-between; /* Лого слева, кнопки справа */
+    align-items: center;
+  }
+  .logo-text {
+    display: none; /* Убираем слово "Объявления" в мобильной версии */
   }
   .auth-buttons {
-    order: -1;
-    width: 100%;
     display: flex;
-    justify-content: center;
+    gap: 8px; /* Уменьшаем gap для кнопок */
+  }
+  .auth-btn {
+    padding: 8px 12px; /* Уменьшаем padding для кнопок */
+    font-size: 14px; /* Уменьшаем шрифт */
   }
   .modal-content {
     margin: 20px;
@@ -427,6 +436,9 @@ button, input, textarea, label { font-family: inherit; }
   }
   .add-text {
     display: none; /* Скрываем текст в мобильной версии */
+  }
+  .footer-inner {
+    justify-content: center; /* Центрируем футер */
   }
 }
 
